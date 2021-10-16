@@ -1,4 +1,4 @@
 # AAQC Drone Firmware
-ESP32 code for the drone.
+Firmware code for the drones.
 
-Fork of [https://github.com/PepeTheFroggie/EspCopter32](PepeTheFroggie/EspCopter32)
+Fork of <a src="https://github.com/PepeTheFroggie/EspCopter32" href="_blank">PepeTheFroggie/EspCopter32</a>
