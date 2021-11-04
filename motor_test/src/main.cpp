@@ -1,8 +1,8 @@
 #include <Arduino.h>
-#include <Servo.h>
+#include <ESP32Servo.h>
 
 #define CONTROLLER_GPIO 5
-#define ACCELERATION 1
+#define ACCELERATION 1 
 unsigned int thrust = 0;
 int ang;
 
@@ -30,13 +30,13 @@ void setup()
 
 void loop()
 {
-	if (digitalRead(CONTROLLER_GPIO) == HIGH)
+	if (digitalRead(CONTROLLER_GPIO) != HIGH)
 	{
 		thrust += ACCELERATION;
 		if(thrust > 180) {
 			thrust = 180;
 		}
-		ang = map(thrust, 0, 20, 0, 180);
+		ang = map(thrust, 0, 40, 0, 180);
 
 		motor1.write(ang);
 		motor2.write(ang);
@@ -57,5 +57,5 @@ void loop()
 		Serial.println("OFF");
 	}
 
-	delay(500);
+	delay(1000);
 }
