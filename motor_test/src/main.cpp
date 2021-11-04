@@ -1,7 +1,7 @@
 #include <Arduino.h>
 #include <Servo.h>
 
-#define CONTROLLER_GPIO 17
+#define CONTROLLER_GPIO 5
 #define ACCELERATION 1
 unsigned int thrust = 0;
 int ang;
@@ -33,6 +33,9 @@ void loop()
 	if (digitalRead(CONTROLLER_GPIO) == HIGH)
 	{
 		thrust += ACCELERATION;
+		if(thrust > 180) {
+			thrust = 180;
+		}
 		ang = map(thrust, 0, 20, 0, 180);
 
 		motor1.write(ang);
