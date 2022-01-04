@@ -287,6 +287,7 @@ void loop()
 	if      (debugvalue == 1) Serial.printf("%4d %4d %4d \n", gyroADC[0], gyroADC[1], gyroADC[2]);
 	else if (debugvalue == 2) Serial.printf("%5d %5d %5d \n", accADC[0], accADC[1], accADC[2]);
 	else if (debugvalue == 3) Serial.printf("%3f %3f \n", angle[0], angle[1]);
+	else if (debugvalue == 4) Serial.printf("");
 
 	delay(CYCLETIME-1);
 
