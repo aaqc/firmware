@@ -3,13 +3,13 @@
 #include <Wire.h>
 #include <EEPROM.h>
 
-#include "RC.h"
+#include "rc.h"
 
 #define WIFI_CHANNEL 4
 #define PWMOUT  // normal esc, uncomment for serial esc
 #define LED 2
 #define CALSTEPS 256 // gyro and acc calibration steps
-//#define externRC // use of external RC receiver in ppmsum mode
+#define externRC // use of external RC receiver in ppmsum mode
 //#define webServer // use of webserver to change PID
 
 extern int16_t accZero[3];
