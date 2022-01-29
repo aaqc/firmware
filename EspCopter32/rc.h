@@ -1,8 +1,8 @@
 // Spec of RC data
 
 #define CHANNELS 8
-#define RC_IN_PIN 27 
-#define RC_IN_GPIO GPIO_NUM_27
+#define RC_IN_PIN 14
+#define RC_IN_GPIO GPIO_NUM_14
 
 typedef struct 
 {
